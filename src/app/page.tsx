@@ -1,13 +1,13 @@
 import fetcher from '@/common/utils/fetcher';
-import ExampleClientComponent from '@/modules/ExampleClientComponent/page';
+import Showcase from '@/modules/Showcase/page';
 
 export default async function Home() {
   const getData = await fetcher<any, any>({
-    path: '/users',
+    path: '/products',
     isExternal: true,
   });
 
-  console.log(getData);
+  // console.log(getData);
 
-  return <ExampleClientComponent />;
+  return <Showcase dataFromServer={getData} />;
 }

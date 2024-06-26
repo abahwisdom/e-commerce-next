@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import { User } from './types/Users';
+import { Product } from './types/Product';
 
 // Define a base query function using fetch
 const baseQuery = fetchBaseQuery({
@@ -7,16 +7,16 @@ const baseQuery = fetchBaseQuery({
 });
 
 // Define an API slice with endpoints
-export const exampleApi = createApi({
-  reducerPath: 'exampleApi',
+export const productsApi = createApi({
+  reducerPath: 'productsApi',
   baseQuery: baseQuery,
   endpoints: (builder) => ({
-    getTheUsers: builder.query<User, {}>({
-      query: () => `users`,
+    getTheProducts: builder.query<Product[], {}>({
+      query: () => `products`,
     }),
     // Add more endpoints as needed
   }),
 });
 
 // Export API hooks for usage in components
-export const { useGetTheUsersQuery } = exampleApi;
+export const { useGetTheProductsQuery } = productsApi;
