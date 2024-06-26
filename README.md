@@ -1,32 +1,8 @@
-## [Next.js](https://nextjs.org/) + Typescript + Redux Toolkit + RTK Query + TailwindCSS starter kit
-
-The Next.js version is 14 and it using App Router. The documentation of this starter kit is on progress, and I will record a video to brief about this starter kit / boilerplate
-
-## Getting Started
-
-#### Clone this template
-
-There's two way to clone this template:
-
-1. Click the <b>'Use this template'</b> button above
-   or
-2. Use `create-next-app`
-
-```
-pnpm create next-app  -e https://github.com/hanifrev/nextjs-redux-starter
-```
-
-you can use yarn / npx too, it's up to you, but I recommend to using pnpm
-
 #### Installation
 
 ```
 pnpm install
 ```
-
-#### .env files
-
-Make sure you already create `.env` files on the root of the repo, you can use everything inside `.env.example` as starter
 
 #### Running
 
