@@ -15,6 +15,7 @@ export default function CategoryMenu({setSelectedCategory, selectedCategory, pro
     const categories = getCategories(products);
 
     return (
+        categories && categories.length > 0 ?
         <div className="flex justify-between p-2 mb-4 border rounded-md overflow-auto">
             <div className="flex gap-2">
                 {categories.map((category) => (
@@ -28,6 +29,7 @@ export default function CategoryMenu({setSelectedCategory, selectedCategory, pro
             >
                 <span className="font-semibold">View all</span>
             </Button>
-        </div>
+        </div>:
+        <div></div>
     )
 }

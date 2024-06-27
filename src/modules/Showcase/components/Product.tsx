@@ -42,8 +42,8 @@ export default function Product({ product, productIndex }:{product: ProductType,
     return (
         <div className="product space-y-4 p-4 border rounded-md hover:border-[#DB4444] transition ease-in-out delay-150">
             <Carousel {...carouselSettings} >
+                <Image src={product.image} alt={product.title} height={200} width={200} className="md:h-[300px] h-[200px] object-center object-contain bg-white rounded" priority={productIndex<4} />
                 <Image src={product.image} alt={product.title} height={200} width={200} className="md:h-[300px] h-[200px] object-center object-contain rounded" priority={productIndex<4} />
-                <Image src={product.image} alt={product.title} height={200} width={200} className="md:h-[300px] h-[200px] object-center object-contain rounded" />
             </Carousel>
             <h3 className="font-medium line-clamp-2 h-12">{product.title}</h3>
             <p className="">${product.price}</p>

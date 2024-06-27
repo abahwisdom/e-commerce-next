@@ -40,7 +40,9 @@ async function fetcher<Res, Req = never>({
         'Content-Type': 'application/json',
         ...headers,
       },
+      next: { revalidate: 3600 },
       ...options,
+      
     });
 
     console.log('STATUS:', response.status);
@@ -52,7 +54,7 @@ async function fetcher<Res, Req = never>({
     responseData = await response.json();
   } catch (error) {
     console.error('Fetch Error:', error);
-    throw error;
+    // throw error;
   }
 
   return responseData;
