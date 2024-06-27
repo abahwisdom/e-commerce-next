@@ -14,8 +14,6 @@ const Showcase = ({dataFromServer}:{dataFromServer:ProductType[]}) => {
 
   const filteredData = selectedCategory==="" ? dataFromServer : dataFromServer?.filter((product) => product.category === selectedCategory);
 
-  // console.log(data);
-
   return (
     <main className="min-h-[calc(100vh-114px)] container mx-auto px-4 md:px-10 py-10">
       <CategoryMenu setSelectedCategory={setSelectedCategory} selectedCategory={selectedCategory} products={dataFromServer} />
@@ -27,7 +25,7 @@ const Showcase = ({dataFromServer}:{dataFromServer:ProductType[]}) => {
 
       {dataFromServer && filteredData?.length === 0 &&
          <div className="text-center flex flex-col gap-4 justify-center items-center h-[calc(100vh-260px)]">
-          <GiftFilled style={{fontSize:'60px', color:"#62595929"}} className='text-[#DB4444]' />
+          <GiftFilled style={{fontSize:'60px', color:"#62595929"}} />
           <div className='flex flex-col'>
             <span className='text-lg'>No Items Available</span>
           </div>
@@ -35,7 +33,7 @@ const Showcase = ({dataFromServer}:{dataFromServer:ProductType[]}) => {
       }
       {/* {isLoading &&
          <div className="text-center flex flex-col gap-4 justify-center items-center h-[calc(100vh-260px)]">
-          <GiftFilled style={{fontSize:'60px', color:"#62595929"}} className='animate-pulse text-[#DB4444]' />
+          <GiftFilled style={{fontSize:'60px', color:"#62595929"}} className='animate-pulse' />
         </div>
       } */}
       {!dataFromServer &&

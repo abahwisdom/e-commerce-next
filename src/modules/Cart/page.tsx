@@ -117,7 +117,7 @@ const Cart = () => {
         </>}
         {!cartItems || cartItems?.length === 0 &&
          <div className="text-center flex flex-col gap-4 justify-center items-center h-[calc(100vh-260px)]">
-          <GiftFilled style={{fontSize:'60px', color:"#62595929"}} className='text-[#DB4444]' />
+          <GiftFilled style={{fontSize:'60px', color:"#62595929"}} />
           <div className='flex flex-col'>
             <span className='text-lg'>No Items In Cart</span>
             <Button type="primary" className="text-white px-4 py-2 mt-2 rounded w-full"

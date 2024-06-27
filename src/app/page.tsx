@@ -7,7 +7,5 @@ export default async function Home() {
     isExternal: true,
   });
 
-  // console.log(getData);
-
   return <Showcase dataFromServer={getData} />;
 }
