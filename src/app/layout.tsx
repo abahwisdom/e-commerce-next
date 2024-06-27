@@ -10,7 +10,7 @@ import Footer from '@/modules/AppLayout/components/Footer';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Blinqpay frontend test',
+  title: 'Blinqpay Shop',
   description: 'E-commerce app powered by Next.js and Ant Design',
 };
 
