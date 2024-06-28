@@ -41,9 +41,9 @@ const Cart = () => {
             <thead>
                 <tr className="text-left">
                 <th className="py-2 font-medium">Product</th>
-                <th className="py-2 font-medium">Price</th>
-                <th className="py-2 font-medium">Quantity</th>
-                <th className="py-2 font-medium">Subtotal</th>
+                <th className="p-2 font-medium">Price</th>
+                <th className="p-2 font-medium">Quantity</th>
+                <th className="p-2 font-medium">Subtotal</th>
                 </tr>
             </thead>
             <tbody>
@@ -74,7 +74,7 @@ const Cart = () => {
                         </Button>
                     </div>
                     </td>
-                    <td className="p-2">${item.price * item.quantity}</td>
+                    <td className="p-2">${Math.round(item.price * item.quantity * 100) / 100}</td>
                     <td className="p-2">
                     <Popconfirm
                         title="Remove Item"
